@@ -7,6 +7,7 @@ import 'package:busha_app/src/values/assets/svg.dart';
 import 'package:busha_app/views/components/app_bar/app_bar.dart';
 import 'package:busha_app/views/widgets/app_divider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 
 class ExploreScreen extends StatelessWidget {
@@ -27,6 +28,7 @@ class ExploreScreen extends StatelessWidget {
         ],
       ),
       body: const SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
         child: Column(
           children: [
             YMargin(20),

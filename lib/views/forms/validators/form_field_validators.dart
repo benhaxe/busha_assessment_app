@@ -5,7 +5,7 @@ class AppFormFielValidator {
   static String? emailValidator(String? value) {
     if (value == null || value.isEmpty) {
       return 'Email is Required';
-    } else if (!emailRegex.hasMatch(value)) {
+    } else if (!emailRegex.hasMatch(value.toLowerCase())) {
       return 'Invalid Email';
     } else {
       return null;

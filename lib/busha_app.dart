@@ -1,4 +1,4 @@
-import 'package:busha_app/app/home/presentation/app_home.dart';
+import 'package:busha_app/app/auth/presentation/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:busha_app/src/scaler/scaler.dart';
 import 'package:busha_app/src/theme/app_theme.dart';
@@ -18,9 +18,7 @@ class BushaApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'BushaApp',
           theme: AppTheme(builderContext).lightTheme,
-          home: const AppHome(),
-
-          /* home: const LoginScreen(), */
+          home: const LoginScreen(),
         );
       }),
     );

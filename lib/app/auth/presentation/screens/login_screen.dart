@@ -110,12 +110,29 @@ class _LoginScreenState extends State<LoginScreen> {
                     isLoading.value = true;
                     Future.delayed(const Duration(seconds: 4), () {
                       isLoading.value = false;
-
-                      //Navigate to home screen.
                       Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (_) {
-                            return const AppHome();
+                        PageRouteBuilder(
+                          pageBuilder:
+                              (context, animation, secondaryAnimation) =>
+                                  const AppHome(),
+                          transitionsBuilder:
+                              (context, animation, secondaryAnimation, child) {
+                            const begin = Offset(0.0, 1.0);
+                            const end = Offset.zero;
+                            var curve = Curves.ease;
+                            var curveTween = CurveTween(curve: curve);
+                            final tween =
+                                Tween(begin: begin, end: end).chain(curveTween);
+
+                            final curvedAnimation = CurvedAnimation(
+                              parent: animation,
+                              curve: curve,
+                            );
+                            /* final offsetAnimation = animation.drive(tween); */
+                            return SlideTransition(
+                              position: tween.animate(curvedAnimation),
+                              child: child,
+                            );
                           },
                         ),
                       );

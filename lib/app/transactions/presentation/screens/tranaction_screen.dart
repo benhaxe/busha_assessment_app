@@ -11,8 +11,24 @@ import 'package:busha_app/views/components/app_bar/app_bar.dart';
 import 'package:busha_app/views/widgets/app_divider.dart';
 import 'package:flutter/material.dart';
 
-class TransactionScreen extends StatelessWidget {
+class TransactionScreen extends StatefulWidget {
   const TransactionScreen({super.key});
+
+  @override
+  State<TransactionScreen> createState() => _TransactionScreenState();
+}
+
+class _TransactionScreenState extends State<TransactionScreen> {
+  bool startAnimation = false;
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      setState(() {
+        startAnimation = true;
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -40,8 +56,19 @@ class TransactionScreen extends StatelessWidget {
               return ListView.separated(
                 shrinkWrap: true,
                 itemCount: data.length,
-                itemBuilder: (context, index) => TransactionItem(
-                  transaction: data[index],
+                itemBuilder: (context, index) => AnimatedContainer(
+                  height: 50,
+                  width: context.width,
+                  curve: Curves.easeInOut,
+                  duration: Duration(milliseconds: 300 + (index * 200)),
+                  transform: Matrix4.translationValues(
+                    startAnimation ? 0 : context.width,
+                    0,
+                    0,
+                  ),
+                  child: TransactionItem(
+                    transaction: data[index],
+                  ),
                 ),
                 separatorBuilder: (context, index) =>
                     const AppHorizontalDivider(

@@ -16,6 +16,8 @@ class AppHome extends StatefulWidget {
 
 class _AppHomeState extends State<AppHome> {
   int currentIndex = 0;
+  late PageController _pageController;
+
   List<Widget> children = [
     const ExploreScreen(),
     const PortfolioScreen(),
@@ -25,13 +27,42 @@ class _AppHomeState extends State<AppHome> {
   ];
 
   @override
+  void initState() {
+    super.initState();
+    _pageController = PageController();
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: children.elementAt(currentIndex),
+      body: SizedBox.expand(
+        child: PageView(
+          controller: _pageController,
+          onPageChanged: (index) {
+            setState(() {
+              currentIndex = index;
+            });
+          },
+          children: [
+            children.elementAt(currentIndex),
+          ],
+        ),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
         onTap: (value) => setState(() {
           currentIndex = value;
+          _pageController.animateToPage(
+            value,
+            duration: const Duration(milliseconds: 5),
+            curve: Curves.easeOut,
+          );
         }),
         selectedItemColor: Theme.of(context).colorScheme.onSecondary,
         unselectedItemColor:
