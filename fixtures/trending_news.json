@@ -1,0 +1,44 @@
+
+[
+    {
+        "id": "busha",
+        "banner": "",
+        "title":"Busha Co-founder calls for more Bitcoin Developer to build it's new product",
+        "channel": "Busha",
+        "dateTime": "2024-05-07T01:00:00Z",
+        "isFeatured":true
+    },
+    {
+        "id": "coindesk",
+        "banner": "",
+        "title":"Ethereum Co-founder opposes El-Salvador Bitcoin Adoption Policy",
+        "channel": "CoinDesk",
+        "dateTime": "2024-05-07T13:00:00Z",
+        "isFeatured": false
+    },
+    {
+        "id": "coinbase",
+        "banner": "",
+        "title":"Coinbase looks out for Technical product manager to reach even more Bitcoiners through it's new Line of product",
+        "channel": "Coinbase",
+        "dateTime": "2023-12-10T02:00:00Z",
+        "isFeatured": false
+    },
+    {
+        "id": "patricia",
+        "banner": "",
+        "title":"Hanu of Patricia and Ezra of Paystack opposes El-Salvador Bitcoin Adoption Policy",
+        "channel": "Patricia",
+        "dateTime": "2023-12-10T02:00:00Z",
+        "isFeatured": false
+    },
+    {
+        "id": "busha",
+        "banner": "",
+        "title":"Busha Co-founder calls for more Bitcoin Developer to build it's new product",
+        "channel": "Busha",
+        "dateTime": "2023-12-10T02:00:00Z",
+        "isFeatured": false
+    }
+]
+    

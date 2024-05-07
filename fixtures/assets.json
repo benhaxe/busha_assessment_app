@@ -1,0 +1,72 @@
+
+[
+    {
+        "id": "btc",
+        "logo": "",
+        "coin":"Bitcoin",
+        "abbreviation":"BTC",
+        "indication": 176,
+        "walletBalance": 245000,
+        "isTodayMover":false
+    },
+    {
+        "id": "eth_mover",
+        "logo": "",
+        "coin":"Ethereum",
+        "abbreviation":"ETH",
+        "indication": 176,
+        "isTodayMover":true
+    },
+    {
+        "id": "polygon",
+        "logo": "",
+        "coin":"Polygon",
+        "abbreviation":"POL",
+        "indication": 676,
+        "walletBalance": 4500,
+        "isTodayMover":false
+    },
+    {
+        "id": "btc_mover",
+        "logo": "",
+        "coin":"Bitcoin",
+        "abbreviation":"BTC",
+        "indication": 276,
+        "isTodayMover":true
+    },
+    {
+        "id": "tez",
+        "logo": "",
+        "coin":"Tezos",
+        "abbreviation":"XTZ",
+        "indication": 906,
+        "walletBalance": 4500,
+        "isTodayMover":false
+    },
+    {
+        "id": "sol_mover",
+        "logo": "",
+        "coin":"Solana",
+        "abbreviation":"SOL",
+        "indication": 276,
+        "isTodayMover":true
+    },
+    {
+        "id": "bus",
+        "logo": "",
+        "coin":"Busha",
+        "abbreviation":"BUS",
+        "indication": 969,
+        "walletBalance": 5000000,
+        "isTodayMover":false
+    },
+    {
+        "id": "bus_mover",
+        "logo": "",
+        "coin":"Busha",
+        "abbreviation":"BUS",
+        "indication": 176,
+        "isTodayMover":false
+    }
+]
+    
