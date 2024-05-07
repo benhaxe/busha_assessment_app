@@ -28,10 +28,8 @@ class AuthLogic {
     String userPassword = _reArrangePassword(userInput);
 
     if (userPassword != correctPassword) {
-      print("Invalid Password");
       return false;
     }
-    print("Valid Password");
     return true;
   }
 }
